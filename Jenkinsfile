@@ -48,8 +48,8 @@ pipeline
 	{
     		steps
     		{
-        		sh 'docker tag scientific-calculator vinay592/scientific-calculator'
-        		sh 'docker push vinay592/scientific-calculator'
+        		sh 'docker tag scientific-calculator vinayvb18/scientific-calculator'
+        		sh 'docker push vinayvb18/scientific-calculator'
     		}
 	}
     }
