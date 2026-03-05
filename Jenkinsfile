@@ -44,6 +44,13 @@ pipeline
                 sh 'docker build -t scientific-calculator .'
             }
         }
-
+	stage('Push Docker Image')
+	{
+    		steps
+    		{
+        		sh 'docker tag scientific-calculator vinay592/scientific-calculator'
+        		sh 'docker push vinay592/scientific-calculator'
+    		}
+	}
     }
 }
