@@ -28,6 +28,14 @@ pipeline
                 sh 'java -cp ".:src/program:src/test:lib/*" org.junit.runner.JUnitCore CalculatorTest'
             }
         }
+        
+	stage('Check Docker')
+	{
+    		steps
+    		{
+        		sh 'docker --version'
+    		}
+	}
 
         stage('Build Docker Image')
         {
