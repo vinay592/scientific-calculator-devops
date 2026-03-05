@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM eclipse-temurin:17
 
 WORKDIR /app
 
@@ -6,4 +6,4 @@ COPY src/program/Calculator.java .
 
 RUN javac Calculator.java
 
-CMD ["java","Calculator"]
+CMD ["java", "Calculator"]
