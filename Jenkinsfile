@@ -5,14 +5,6 @@ pipeline
     stages
     {
 
-        stage('Clone Repository')
-        {
-            steps
-            {
-                git 'https://github.com/vinay592/scientific-calculator-devops.git'
-            }
-        }
-
         stage('Compile Program')
         {
             steps
