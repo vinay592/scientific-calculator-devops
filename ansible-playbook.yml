@@ -1,0 +1,15 @@
+---
+- name: Deploy Scientific Calculator Container
+  hosts: local
+  become: true
+
+  tasks:
+
+    - name: Run Calculator Container
+      docker_container:
+        name: scientific-calculator
+        image: vinayvb18/scientific-calculator
+        state: started
+        recreate: yes
+        tty: true
+        interactive: true
