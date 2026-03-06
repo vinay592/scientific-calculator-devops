@@ -5,6 +5,13 @@ pipeline
     stages
     {
 
+	stage('Checkout Code')
+        {
+            steps
+            {
+                checkout scm
+            }
+        }
         stage('Compile Program')
         {
             steps
