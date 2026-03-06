@@ -61,6 +61,13 @@ pipeline
         		sh 'docker push vinayvb18/scientific-calculator'
     		}
 	}
+	stage('Deploy using Ansible')
+{
+    steps
+    {
+        sh 'ansible-playbook -i inventory.ini ansible-playbook.yml'
+    }
+}
     }
     post
     {
