@@ -12,4 +12,5 @@
         state: started
         recreate: yes
         tty: true
+        pull: yes
         interactive: true
